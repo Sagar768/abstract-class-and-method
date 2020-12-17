@@ -1,0 +1,80 @@
+package com.java.abstractMethod;
+
+abstract class bird
+{
+	abstract void fly();
+	abstract void eat();
+}
+
+
+abstract class eagle extends bird
+{
+	void fly()
+	{
+		System.out.println("eagle bird flying");
+	}
+}
+
+
+abstract class spanow extends bird
+{
+	void fly()
+	{
+		System.out.println("spanow bird flying");
+	}
+}
+
+
+class goldenEagle extends eagle
+{
+	public void eat() 
+	{
+		System.out.println("goldeenEagle bird is eating");
+	}
+}
+
+
+class serpantEagle extends eagle 
+{
+	public void eat()
+	{
+		System.out.println("serpantEagle bird is eating");
+	}
+}
+
+
+class vegSparow extends eagle
+{
+	public void eat()
+	{
+		System.out.println("vegSparow bird is eating");
+	}
+}
+
+
+class nonVegSparow
+{
+	public void eat()
+	{
+		System.out.println("nonVegSparow bird is eating");
+	}
+}
+
+
+public class main {
+
+	public static void main(String[] args) 
+	{
+		goldenEagle gl=new goldenEagle();
+		gl.eat();
+		
+		serpantEagle se=new serpantEagle();
+		se.eat();
+		
+		vegSparow vs=new vegSparow();
+		vs.eat();
+		
+		nonVegSparow nvs=new nonVegSparow();
+		nvs.eat();
+	}
+}
